@@ -194,7 +194,8 @@ export class profile extends Component {
                                             <li className="breadcrumb-item">
                                                 <a href="#">Home</a>
                                             </li>
-                                            <li className="breadcrumb-item active">Settings</li>
+                                            <li className="breadcrumb-item ">Settings</li>
+                                            <li className="breadcrumb-item active">Profile</li>
                                         </ol>
                                     </div>
                                     {/* /.col */} </div>

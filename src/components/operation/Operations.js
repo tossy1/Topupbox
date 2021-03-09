@@ -181,7 +181,8 @@ export class Operations extends Component {
           <div className="col-sm-6">
             <ol className="breadcrumb float-sm-right">
               <li className="breadcrumb-item"><a href="#">Home</a></li>
-              <li className="breadcrumb-item active">Settings</li>
+              <li className="breadcrumb-item">Settings</li>
+              <li className="breadcrumb-item active">Preference</li>
             </ol>
           </div>{/* /.col */}
         </div>{/* /.row */}
@@ -196,9 +197,9 @@ export class Operations extends Component {
             <div className="card">
               <div className="card-header">
                 <ul className="navbar nav">
-                  <li className="btn btn-light active"><Link to="/profile">Profile</Link></li>
-                              <li className="btn btn-light" ><Link to="/team">Team</Link></li>
-                  <li className="btn btn-light"><Link to="/operations">Prefrence</Link></li>
+                  <li className="btn btn-light"><Link to="/profile">Profile</Link></li>
+                  <li className="btn btn-light" ><Link to="/team">Team</Link></li>
+                  <li className="btn btn-light active"><Link to="/operations">Prefrence</Link></li>
                   <li className="btn btn-light"><Link to="/support">Support</Link></li>
                   <li className="btn btn-light"><Link to="/setRoutingRules">Set routing rules</Link></li>
                   <li className="btn btn-light"><Link to="/apiWebHook">API &amp; WebHooks</Link></li>

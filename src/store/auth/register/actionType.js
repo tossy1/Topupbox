@@ -1,0 +1,1 @@
+export const MERCHANT_SIGN_UP = "MERCHANT_SIGN_UP";

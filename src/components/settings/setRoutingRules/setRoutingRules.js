@@ -174,7 +174,8 @@ export class setRoutingRules extends Component {
                                     <div className="col-sm-6">
                                         <ol className="breadcrumb float-sm-right">
                                             <li className="breadcrumb-item"><a href="#">Home</a></li>
-                                            <li className="breadcrumb-item active">Settings</li>
+                                            <li className="breadcrumb-item ">Settings</li>
+                                            <li className="breadcrumb-item active">Set Routing Rules</li>
                                         </ol>
                                     </div>{/* /.col */}
                                 </div>{/* /.row */}

@@ -48,7 +48,7 @@ class App extends Component {
                         <Route exact path='/support' component={Support}/>
                         <Route exact path='/setRoutingRules' component={SetRoutingRules}/>
                         <Route exact path='/operations' component={Operations}/>
-                        <Route exact path='apiWebhook' component={ApiWebhook}/>
+                        <Route exact path='/apiWebhook' component={ApiWebhook}/>
 
 
 

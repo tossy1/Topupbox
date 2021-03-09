@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
-export default class apiWebhook extends Component {
+export default class ApiWebhook extends Component {
     render() {
         return (
 
-            <div>
                 <div className="wrapper">
                     {/* Navbar */}
                     <nav className="main-header navbar navbar-expand navbar-white navbar-light">
@@ -19,7 +19,8 @@ export default class apiWebhook extends Component {
 </li>
 <li class="nav-item d-none d-sm-inline-block">
   <a href="#" class="nav-link">Contact</a>
-</li*/} </ul>
+</li*/}
+                        </ul>
                         {/* SEARCH FORM */}
                         <form className="form-inline ml-3">
                             <div className="input-group input-group-sm">
@@ -43,78 +44,60 @@ export default class apiWebhook extends Component {
                                     <span className="dropdown-item dropdown-header">15 Notifications</span>
                                     <div className="dropdown-divider" />
                                     <a href="#" className="dropdown-item">
-                                        <i className="fas fa-envelope mr-2" />
-                                        4 new messages
-                                        <span className="float-right text-muted text-sm">3 mins</span>
+                                        <i className="fas fa-envelope mr-2" /> 4 new messages
+            <span className="float-right text-muted text-sm">3 mins</span>
                                     </a>
                                     <div className="dropdown-divider" />
                                     <a href="#" className="dropdown-item">
-                                        <i className="fas fa-users mr-2" />
-                                        8 friend requests
-                                        <span className="float-right text-muted text-sm">12 hours</span>
+                                        <i className="fas fa-users mr-2" /> 8 friend requests
+            <span className="float-right text-muted text-sm">12 hours</span>
                                     </a>
                                     <div className="dropdown-divider" />
                                     <a href="#" className="dropdown-item">
-                                        <i className="fas fa-file mr-2" />
-                                        3 new reports
-                                        <span className="float-right text-muted text-sm">2 days</span>
+                                        <i className="fas fa-file mr-2" /> 3 new reports
+            <span className="float-right text-muted text-sm">2 days</span>
                                     </a>
                                     <div className="dropdown-divider" />
                                     <a href="#" className="dropdown-item dropdown-footer">See All Notifications</a>
                                 </div>
                             </li>
-                            <li className="nav-item dropdown"
-                                style={
-                                    { marginTop: '-10px' }
-                                }>
+                            <li className="nav-item dropdown" style={{ marginTop: '-10px' }}>
                                 <a className="nav-link" data-toggle="dropdown" href="#">
                                     <img src="dist/img/user2-160x160.jpg" width="40px;" className="img-circle elevation-2" alt="User Image" />
                                 </a>
                                 <div className="dropdown-menu dropdown-menu-right">
-                                    <Link to="/profile" className="dropdown-item">
+                                    <a href="profile.html" className="dropdown-item">
                                         <i className="fas fa-user mr-2" />Profile
-                                    </Link>
+          </a>
                                     <div className="dropdown-divider" />
-                                    <Link to="/operations" className="dropdown-item">
+                                    <a href="operations.html" className="dropdown-item">
                                         <i className="fas fa-cog mr-2" />Settings
-                                    </Link>
+          </a>
                                     <div className="dropdown-divider" />
                                     <a href="#" className="dropdown-item">
                                         <i className="fas fa-times mr-2" />Logout
-                                    </a>
+          </a>
                                 </div>
                             </li>
                             {/*li class="nav-item">
   <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button"><i
       class="fas fa-th-large"></i></a>
-</li*/} </ul>
+</li*/}
+                        </ul>
                     </nav>
                     {/* /.navbar */}
                     {/* Main Sidebar Container */}
                     <aside className="main-sidebar sidebar-dark-primary elevation-4">
                         {/* Brand Logo */}
-                        <a href="index3.html" className="brand-link"
-                            style={
-                                { backgroundColor: '#343a40' }
-                            }>
-                            <center>
-                                <img src="dist/img/Topupbox.png" alt="Topup-box Logo" width="180px;" height="50px;" className=" img-square" /></center>
+                        <a href="index3.html" className="brand-link" style={{ backgroundColor: '#343a40' }}><center>
+                            <img src="dist/img/Topupbox.png" alt="Topup-box Logo" width="180px;" height="50px;" className=" img-square" /></center>
                         </a>
                         {/* Sidebar */}
                         <div className="sidebar">
                             {/* Sidebar user panel (optional) */}
-                            <div className="mt-3 pb-3"
-                                style={
-                                    {
-                                        paddingTop: 15,
-                                        marginBottom: '-20px'
-                                    }
-                                }>
+                            <div className="mt-3 pb-3" style={{ paddingTop: 15, marginBottom: '-20px' }}>
                                 <div className="info">
-                                    <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false"
-                                        style={
-                                            { marginLeft: '-15px' }
-                                        }>
+                                    <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" style={{ marginLeft: '-15px' }}>
                                         <li className="nav-item has-treeview">
                                             <a href="#" className="nav-link">
                                                 <p>Business name 1</p>
@@ -170,6 +153,12 @@ export default class apiWebhook extends Component {
                                         </Link>
                                     </li>
                                     <li className="nav-item">
+                                        <Link to="#" className="nav-link">
+                                            <i className="nav-icon fas fa-file" />
+                                            <p>API Documentation</p>
+                                        </Link>
+                                    </li>
+                                    <li className="nav-item">
                                         <Link to="/settings" className="nav-link active">
                                             <i className="nav-icon fas fa-cog" />
                                             <p>Settings</p>
@@ -177,8 +166,10 @@ export default class apiWebhook extends Component {
                                     </li>
                                 </ul>
                             </nav>
-                            {/* /.sidebar-menu */} </div>
-                        {/* /.sidebar */} </aside>
+                            {/* /.sidebar-menu */}
+                        </div>
+                        {/* /.sidebar */}
+                    </aside>
                     {/* Content Wrapper. Contains page content */}
                     <div className="content-wrapper">
                         {/* Content Header (Page header) */}
@@ -187,19 +178,18 @@ export default class apiWebhook extends Component {
                                 <div className="row mb-2">
                                     <div className="col-sm-6">
                                         <h1 className="m-0 text-dark">Settings</h1>
-                                    </div>
-                                    {/* /.col */}
+                                    </div>{/* /.col */}
                                     <div className="col-sm-6">
                                         <ol className="breadcrumb float-sm-right">
-                                            <li className="breadcrumb-item">
-                                                <a href="#">Home</a>
-                                            </li>
-                                            <li className="breadcrumb-item active">Settings</li>
+                                            <li className="breadcrumb-item"><a href="#">Home</a></li>
+                                            <li className="breadcrumb-item">Settings</li>
+                                            < li className="breadcrumb-item active" > API &amp; Webhook </li>
+
                                         </ol>
-                                    </div>
-                                    {/* /.col */} </div>
-                                {/* /.row */} </div>
-                            {/* /.container-fluid */} </div>
+                                    </div>{/* /.col */}
+                                </div>{/* /.row */}
+                            </div>{/* /.container-fluid */}
+                        </div>
                         {/* /.content-header */}
                         <section className="content">
                             <div className="container-fluid">
@@ -209,71 +199,91 @@ export default class apiWebhook extends Component {
                                         <div className="card">
                                             <div className="card-header">
                                                 <ul className="navbar nav">
-                                                    <li className="btn btn-light active">
-                                                        <Link to="/">Profile</Link>
-                                                    </li>
-                                                    <li className="btn btn-light">
-                                                        <Link to="/team">Team</Link>
-                                                    </li>
-                                                    <li className="btn btn-light">
-                                                        <Link to="/operations">Prefrence</Link>
-                                                    </li>
-                                                    <li className="btn btn-light">
-                                                        <Link to="/support">Support</Link>
-                                                    </li>
-                                                    <li className="btn btn-light">
-                                                        <Link to="/setRoutingRules">Set routing rules</Link>
-                                                    </li>
-                                                    <li className="btn btn-light" active>
-                                                        <Link to="/apiWebhook">API WebHooks</Link>
-                                                    </li>
+                                                    <li className="btn btn-light"><Link to="/profile">Profile</Link></li>
+                                                    <li className="btn btn-light"><Link to="/team">Team</Link></li>
+                                                    <li className="btn btn-light"><Link to="/operations">Prefrence</Link></li>
+                                                    <li className="btn btn-light"><Link to="/support">Support</Link></li>
+                                                    <li className="btn btn-light"><Link to="setRoutingRules">Set routing rules</Link></li>
+                                                    <li className="btn btn-light active"><Link to="#">API &amp; WebHooks</Link></li>
                                                 </ul>
                                             </div>
                                             <div className="card-body">
                                                 <div className="row">
-                                                    <div className="col-md-1" />
-                                                    <form className="form col-md-6" id="form1">
-                                                        <div className="form-field">
-                                                            <label htmlFor="fname">First name</label>
-                                                            <input type="text" name="fname" autoComplete="no" id="fname" className="form-control" />
+                                                    <div className="col-md-1"/>
+                                                    <form action className="col-md-8">
+                                                        <div className="row">
+                                                            <div className="col-25" style={{width:'150px', marginTop:'10px'}}>
+                                                                <p style={{ marginTop: 20 }}>Test Secret Key</p>
+                                                            </div>
+                                                            <div className="col-75" style={{marginTop: '20px' }}>
+                                                                < input type="text" name="password" id="password" defaultValue={
+                                                                    100000000000000
+                                                                }
+                                                                    className="form-control" readOnly="true" />
+
+                                                                <i className="far fa-eye" id="togglePassword" />
+                                                                
+                                                                <Link to='/' className="float-left">Generate new secret key</Link>
+                                                                <Link to='/' onclick="myFunction()" style={{ paddingLeft: '180px' }}>Copy text</Link>
+                                                                
+                                                            </div>
                                                         </div>
-                                                        <div className="form-field">
-                                                            <label htmlFor="sname">Surname &nbsp;&nbsp;</label>
-                                                            <input type="text" name="sname" autoComplete="no" id="sname" className="form-control" />
+                                                        <div className="row">
+                                                            <div className="col-25" style={{ marginTop: '10px', width:'150px' }}>
+                                                                <p style={{ marginTop: 20 }}>Test Public key</p>
+                                                            </div>
+                                                            <div className="col-75" style={{ width: '55%', marginTop: '20px' }}>
+                                                                <input type="text" name="publickey" placeholder={111111111111111} className="form-control" />
+                                                            </div>
                                                         </div>
-                                                        <div className="form-field">
-                                                            <label htmlFor="email">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                                                            <input type="text" name="email" autoComplete="no" id="email" className="form-control" />
+                                                        <div className="row">
+                                                            <div className="col-25" style={{marginTop: '10px', width:'150px'}}>
+                                                                <p style={{ marginTop: 20 }}>Test Callback URL</p>
+                                                            </div>
+                                                            <div className="col-75" style={{marginTop:'20px', width:'55%'}}>
+                                                                <input type="text" name="url" placeholder="Test Callback URL" className="form-control" />
+                                                            </div>
                                                         </div>
-                                                        <div className="form-field">
-                                                            <label htmlFor="bsname">Business Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                                                            <input type="text" name="bsname" autoComplete="no" id="bsname" className="form-control" />
+                                                        <div className="row">
+                                                            <div className="col-25" style={{ marginTop: '10px', width: '150px' }}>
+                                                                <p style={{ marginTop: 10 }}>Test Webhook URL</p>
+                                                            </div>
+                                                            <div className="col-75" style={{ width: '55%', marginTop: '20px'}}>
+                                                                <input type="text" name="webhook" placeholder="Test Webhook URL" className="form-control" />
+                                                            </div>
                                                         </div>
-                                                        <div className="form-field">
-                                                            <label htmlFor="bscontact">Business Contact &nbsp;&nbsp;</label>
-                                                            <input type="text" name="bscontact" autoComplete="no" id="bscontact" className="form-control" />
-                                                        </div>
-                                                        <div className="form-field float-right"
-                                                            style={
-                                                                { marginTop: 20 }
-                                                            }>
+                                                        <div className="row" style={{paddingLeft:'55%', marginTop:'20px'}}>
                                                             <input type="submit" defaultValue="Save Changes" className="btn btn-primary" />
                                                         </div>
                                                     </form>
-                                                    <div className="col-md-3" />
+                                                    <div className="col-md-2" />
                                                 </div>
                                             </div>
-                                            {/* /.card-body */}
-                                            {/* /.card-footer*/} </div>
-                                        {/* /.card */} </div>
+                                        </div>
+                                        {/* /.card-body */}
+                                        {/* /.card-footer*/}
+                                    </div>
+                                    {/* /.card */}
                                 </div>
                             </div>
-                        </section>
-                    </div>
+                        </section></div>
+                    {/* /.content-wrapper */}
+                    {/* Control Sidebar */}
+                    <aside className="control-sidebar control-sidebar-dark">
+                        {/* Control sidebar content goes here */}
+                    </aside>
+                    {/* /.control-sidebar */}
+                    {/* Main Footer */}
+                    <footer className="main-footer">
+                        <strong>Copyright © 2021 <a href="http://">Topup Box</a>.</strong>
+                        All rights reserved.
+    <div className="float-right d-none d-sm-inline-block">
+                            <b>Version</b>
+                        </div>
+                    </footer>
                 </div>
 
-            </div>
+ 
         )
     }
 }
- 

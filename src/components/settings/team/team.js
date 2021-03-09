@@ -193,7 +193,8 @@ export class Team extends Component {
                                             <li className="breadcrumb-item">
                                                 <a href="#">Home</a>
                                             </li>
-                                            <li className="breadcrumb-item active">Settings</li>
+                                            <li className="breadcrumb-item">Settings</li>
+                                            <li className="breadcrumb-item active">Team</li>
                                         </ol>
                                     </div>
                                     {/* /.col */} </div>
@@ -224,7 +225,7 @@ export class Team extends Component {
                                                         <Link to="/setRoutingRules">Set routing rules</Link>
                                                     </li>
                                                     <li className="btn btn-light">
-                                                        <Link to="/apiWebhooks">API &amp; WebHooks</Link>
+                                                        <Link to="/apiWebhook">API &amp; WebHooks</Link>
                                                     </li>
                                                 </ul>
                                             </div>
