@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Nav, NavItem, NavLink, NavBar } from 'reactstrap';
 import SideBar from "../SideBar";
 import Header from "../../../header/Header";
+
 import { merchantSignUp } from "../../../../store/action";
 import { connect } from "react-redux";
 
@@ -12,7 +13,18 @@ class Dashboard extends Component {
         displayNav: true
     }
     componentDidMount() {
-        this.props.merchantSignUp({})
+        this.props.merchantSignUp({
+            address:	"28 ac",
+businessName: "glo",
+dealerId: "121003",
+emailAddress: "tosinadeyemi.98@gmail.com",
+firstName: "tosin",
+lastName: "adeyemi",
+password: "adeyemi1234",
+phoneNumber: "08066468151",
+role:"admin",
+transactionPin:"234501",
+username: "ademitosin"})
     }
 
     onDisplayNav = () => {

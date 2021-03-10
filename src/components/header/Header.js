@@ -1,26 +1,27 @@
-import React, {Component}from 'react'
+import React, {Component, useState}from 'react'
 import {Link} from 'react-router-dom'
 import img1 from '../img/user2-160x160.jpg'
-import {Navbar, NavDropdown, Dropdown, DropdownButton} from 'react-bootstrap'
+import {Navbar, NavDropdown, Dropdown,NavLink, DropdownButton} from 'react-bootstrap'
 import { DropdownMenu, DropdownItem } from 'reactstrap';
 import DropdownToggle from 'react-bootstrap/esm/DropdownToggle';
 
 
-class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {  }
-  }
-  render() { 
+function Header () {
+
+   const [click, setClick] = useState(false)
+
+    const handleClick=() => setClick (!click)
     return ( 
       
       <div className="wrapper">
         {/* Navbar */}
-        <nav className="main-header navbar navbar-expand navbar-white navbar-light">
+
+        <div className="main-header navbar navbar-expand navbar-white navbar-light">
           {/* Left navbar links */}
-          <ul className="navbar-nav">
+          <ul className="navbar-nav" onClick={handleClick}>
             <li className="nav-item">
-              <a className="nav-link" data-widget="pushmenu" href="#" role="button"><i className="fas fa-bars" /></a>
+              {/* <a className="nav-link" data-widget="pushmenu" href="#" role="button"><i className="fas fa-bars" /></a> */}
+              <i className= {click ? 'far fa-times' : ' far fa-bars'}/> 
             </li>
             {/*li class="nav-item d-none d-sm-inline-block">
   <a href="index3.html" class="nav-link">Home</a>
@@ -43,17 +44,18 @@ class Header extends Component {
           <ul className="navbar-nav ml-auto">
             {/* Notifications Dropdown Menu */}
             <li className="nav-item dropdown">
-              <a className="nav-link" data-toggle="dropdown" href="#">
+              <NavLink className="nav-link" data-toggle="dropdown" to="#">
                 <i className="far fa-bell" />
                 <span className="badge badge-warning navbar-badge">15</span>
-              </a>
+              </NavLink>
+              
               <div className="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                 <span className="dropdown-item dropdown-header">15 Notifications</span>
                 <div className="dropdown-divider" />
                 <a href="#" className="dropdown-item">
                   <i className="fas fa-envelope mr-2" />
                   4 new messages
-                                        <span className="float-right text-muted text-sm">3 mins</span>
+                        <span className="float-right text-muted text-sm">3 mins</span>
                 </a>
                 <div className="dropdown-divider" />
                 <a href="#" className="dropdown-item">
@@ -62,11 +64,11 @@ class Header extends Component {
                                         <span className="float-right text-muted text-sm">12 hours</span>
                 </a>
                 <div className="dropdown-divider" />
-                <a href="#" className="dropdown-item">
+                <NavLink to="#" className="dropdown-item">
                   <i className="fas fa-file mr-2" />
                   3 new reports
                                         <span className="float-right text-muted text-sm">2 days</span>
-                </a>
+                </NavLink>
                 <div className="dropdown-divider" />
                 <a href="#" className="dropdown-item dropdown-footer">See All Notifications</a>
               </div>
@@ -81,24 +83,27 @@ class Header extends Component {
 
             </li>
             <li>
-             <Dropdown>
-            
+             {/* <Dropdown>
+            <li>
+              <NavLink className='nav-link'>
+              step
+                  </NavLink>
+            </li>
              
               <DropdownItem>
                   
     </DropdownItem>
               </Dropdown>
-            
+             */}
             </li>
             
             {/*li class="nav-item">
   <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button"><i
       class="fas fa-th-large"></i></a>
 </li*/} </ul>
-        </nav>
+        </div>
         </div>
      );
   }
-}
  
 export default Header;

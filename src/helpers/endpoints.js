@@ -1,4 +1,5 @@
-const domain ='https://api.topupbox.com/services/'
+const domain = 'https://api.topupbox.com/services/'
+
 
 
 export const merchantSignUpUrl = ()=>{
@@ -6,6 +7,6 @@ export const merchantSignUpUrl = ()=>{
 }
 
 export const BalanceMerchantUrl = ()=>{
-return `${domain}/api/v2/w1/balance`
+return `${domain}api/v2/w1/balance`
 
 }
